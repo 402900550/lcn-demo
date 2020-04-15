@@ -1,0 +1,23 @@
+server:
+  port: 5001
+spring:
+  application:
+    name: lcn1
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/write22?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: bjxy_db
+    password: Credit2016Admin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:5555/eureka
+
+tx-lcn:
+  ribbon:
+    loadbalancer:
+      dtx:
+        enabled: true
+  client:
+    manager-address: 127.0.0.1:8070
+
