@@ -1,6 +1,4 @@
 package com.test.lcn2.controller;
-import java.math.BigDecimal;
-import java.util.Date;
 
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.test.lcn2.entity.NewYearCoin;
@@ -10,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 @RestController

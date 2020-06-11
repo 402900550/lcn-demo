@@ -17,6 +17,7 @@
     <modules>
         <module>server</module>
         <module>lcn1</module>
+        <module>lcn2</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
