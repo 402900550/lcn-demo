@@ -1,6 +1,5 @@
 package com.test.lcn1.controller;
 
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.test.lcn1.entity.NewYearCoin;
 import com.test.lcn1.service.NewYearCoinService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,11 +25,10 @@ public class LcnController {
     }
 
     @GetMapping("add")
-    @LcnTransaction
     public String  listadd(){
         NewYearCoin coin=new NewYearCoin();
 
-        coin.setCoinUnit("LCN2");
+        coin.setCoinUnit("LCN1");
         coin.setWardAmount(new BigDecimal("0"));
         coin.setCostAmount(new BigDecimal("0"));
         coin.setCreateTime(new Date());

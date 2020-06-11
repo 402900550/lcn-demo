@@ -26,7 +26,8 @@
         <sharding.version>3.0.0</sharding.version>
         <druid_version>1.0.27</druid_version>
         <mybatisPlus.version>3.1.2</mybatisPlus.version>
-        <seata.version>0.6.1</seata.version>
+        <seata.version>1.2.0</seata.version>
+        <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
     </properties>
 
     <dependencies>

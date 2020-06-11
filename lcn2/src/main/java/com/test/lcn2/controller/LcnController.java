@@ -1,9 +1,9 @@
 package com.test.lcn2.controller;
 
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.test.lcn2.entity.NewYearCoin;
 import com.test.lcn2.feign.Lcn1Service;
 import com.test.lcn2.service.NewYearCoinService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,7 +29,7 @@ public class LcnController {
     }
 
     @GetMapping("add")
-    @LcnTransaction
+    @GlobalTransactional
     public String  listadd() throws Exception {
         NewYearCoin coin=new NewYearCoin();
 
@@ -43,8 +43,8 @@ public class LcnController {
 
         lcn1Service.listadd();
 
-        throw new Exception();
-
+      //  throw new Exception();
+        return ";";
 
     }
 

@@ -2,6 +2,7 @@ package com.test.lcn2.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.test.lcn2.entity.NewYearCoin;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.test.lcn2.entity.NewYearCoin;
  * @author qiliao
  * @since 2019-12-30
  */
+@Mapper
 public interface NewYearCoinMapper extends BaseMapper<NewYearCoin> {
 
 

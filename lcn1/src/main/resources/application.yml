@@ -6,18 +6,24 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/write22?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: bjxy_db
-    password: Credit2016Admin
+    username: root
+    password: root
+
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+  main:
+    allow-bean-definition-overriding: true
+
+
+
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:5555/eureka
+      defaultZone: http://127.0.0.1:8761/eureka
 
-tx-lcn:
-  ribbon:
-    loadbalancer:
-      dtx:
-        enabled: true
-  client:
-    manager-address: 127.0.0.1:8070
 
+mybatis-plus:
+  mapper-locations: classpath*:com/test/lcn1/mapper/*.xml
+  type-aliases-package: com.test.lcn1.entity

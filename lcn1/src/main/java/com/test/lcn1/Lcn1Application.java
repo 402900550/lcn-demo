@@ -1,12 +1,11 @@
 package com.test.lcn1;
 
-import com.codingapi.txlcn.tc.config.EnableDistributedTransaction;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication
-@EnableDistributedTransaction
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @MapperScan("com.test.lcn1.mapper")
 public class Lcn1Application {
 
